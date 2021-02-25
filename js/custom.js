@@ -1,4 +1,4 @@
-$(function (){
+$(function(){
     'use strict';
 
 
@@ -80,10 +80,18 @@ $(function (){
     
 
 
+    $('#projects').mixItUp();
 
-    // $('#projects').mixItUp();
+    $('.shuffle li').click(function () {
+       
+        $(this).addClass('selected').siblings().removeClass('selected');
+        
+    });
+   
 
 });
+
+
 
 
 
