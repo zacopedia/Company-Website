@@ -7,12 +7,6 @@ $(function(){
     var myHeader = $('.header');
     var mySlider = $('.slider')
 
-    // myHeader.height($(window).height());
-
-    // $(window).resize(function(){
-
-    //     myHeader.height($(window).height());
-    // });
 
     // Adjust Links
 
@@ -20,8 +14,6 @@ $(function(){
 
         $(this).addClass('selected').siblings().removeClass('selected');
     });
-
-    // Adjust Bx Slider Center 
 
 
     // Bx Slider 
