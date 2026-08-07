@@ -7,12 +7,12 @@ $(function(){
     var myHeader = $('.header');
     var mySlider = $('.slider')
 
-    myHeader.height($(window).height());
+    // myHeader.height($(window).height());
 
-    $(window).resize(function(){
+    // $(window).resize(function(){
 
-        myHeader.height($(window).height());
-    });
+    //     myHeader.height($(window).height());
+    // });
 
     // Adjust Links
 
@@ -23,9 +23,6 @@ $(function(){
 
     // Adjust Bx Slider Center 
 
-    mySlider.each(function () {
-       $(this).css('padding-top', ($(window).height() - mySlider.height()) / 2);
-   });
 
     // Bx Slider 
 
@@ -46,33 +43,43 @@ $(function(){
 
     //Auto Slider Code 
     
-    $(function autoSlider() {
-     
-        $('.sliderTest, .active').each(function () {
+    (function autoSlider() {
 
+        $('.slider-test .active').each(function () {
+    
             if (!$(this).is(':last-child')) {
-
-               $(this).delay(3000).fadeOut(1000, function () {
-
-                 $(this).removeClass('active').next().addClass('active').fadeIn();
-
-                 autoSlider();
-               });
-
-               
-            } else {
+    
                 $(this).delay(3000).fadeOut(1000, function () {
-                    $(this).removeClass('active');
-
-                    $('.slider-test div').eq(0).addClass('active').fadeIn();
-
+    
+                    $(this)
+                        .removeClass('active')
+                        .next()
+                        .addClass('active')
+                        .fadeIn();
+    
                     autoSlider();
+    
                 });
-
-                
+    
+            } else {
+    
+                $(this).delay(3000).fadeOut(1000, function () {
+    
+                    $(this).removeClass('active');
+    
+                    $('.slider-test div')
+                        .first()
+                        .addClass('active')
+                        .fadeIn();
+    
+                    autoSlider();
+    
+                });
+    
             }
-           
+    
         });
+    
     }());
 
     

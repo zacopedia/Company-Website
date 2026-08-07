@@ -1,21 +1,18 @@
 // Target Humberger Icon
-var humberger = document.querySelector(".humberger");
-var burgerToggle = document.querySelector(".burger-toggle");
-var humbergerOpen = document.querySelector(".humberger-open");
+const humberger = document.querySelector(".humberger");
+const burgerToggle = document.querySelector(".burger-toggle");
+const humbergerOpen = document.querySelector(".humberger-open");
 
 humberger.addEventListener("click", function() {
-    this.classList.toggle('close');
+    // this.classList.toggle('close');
     // humberger.classList.toggle("close");
-    if (humbergerOpen.style.display) {
-        humbergerOpen.style.display = null
-       
-       
-    }
+    // if (humbergerOpen.style.display) {
+    //     humbergerOpen.style.display = null
+    // }
 
-    else {
-        humbergerOpen.style.display ="block"
-        
-    }
+        humberger.classList.toggle("close")
+        humbergerOpen.classList.toggle("active")
+   
     
 })
 
